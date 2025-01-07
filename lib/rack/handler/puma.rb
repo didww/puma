@@ -118,7 +118,7 @@ module Puma
 end
 
 # rackup was removed in Rack 3, it is now a separate gem
-if Object.const_defined?(:Rackup) && ::Rackup.const_defined?(:Handler)
+if Object.const_defined?(:Rackup) && defined?(::Rackup::Handler)
   module Rackup
     module Handler
       module Puma
